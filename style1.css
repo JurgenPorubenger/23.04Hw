@@ -1,0 +1,62 @@
+.parrent {
+  padding: 0;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 100px 100px 100px 100px 100px;
+      grid-template-columns: 100px 100px 100px 100px 100px 100px;
+  -ms-grid-rows: 100px 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px 100px;
+  grid-gap: 10px;
+      grid-template-areas: "a b b b b c" "d b b b b e" "f b b b b g" "h h j j k k";
+}
+
+.parrent div {
+  border: 1px solid;
+  background-color: orange;
+}
+
+.parrent div:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: b;
+  background-color: #00ff15;
+}
+
+.parrent div:nth-child(8) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: h;
+}
+
+.parrent div:nth-child(9) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: j;
+}
+
+.parrent div:nth-child(10) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: k;
+}
+
+@media screen and (max-width: 480px) {
+  .parrent {
+    padding: 0;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50px 50px 50px 50px 50px 50px;
+        grid-template-columns: 50px 50px 50px 50px 50px 50px;
+    -ms-grid-rows: 50px 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px;
+        grid-template-areas: "b b b b b b" "b b b b b b" "b b b b b b" "a c d e f g" "h h j j k k";
+  }
+}
+/*# sourceMappingURL=style1.css.map */
